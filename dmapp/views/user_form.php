@@ -49,21 +49,8 @@ $this->load->view('menu');
                       <span id="fileErroremail" style="color: red; display: none;">Duplicated data not allowed.</span>
                     </div>
                   </div>
-
-                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <div class="form-group" style="padding:10px">
-                      <label for="">Password</label>
-                      <input type="password" class="input-block-level input_validate form-control" placeholder="Password" name="password" value="<?php echo $password; ?>" id="password">
-                    </div>
-                  </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <div class="form-group" style="padding:10px">
-                      <label for="">Confirm Password</label>
-                      <input type="password" class="input-block-level input_validate form-control" placeholder="Confirmed password" name="confirmed_password" value="<?php echo $confirmed_password; ?>" id="confirmed_password">
-                    </div>
-                  </div>
                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="form-group" style="padding:10px">
                       <label for="">User Type</label>
@@ -183,20 +170,6 @@ $this->load->view('menu');
         valid = false;
       }
     });
-
-    var password = $('#password').val();
-    var confirmPassword = $('#confirmed_password').val();
-    if (password !== confirmPassword) {
-      alert("Re-enter your confirm password!")
-      jQuery(this).addClass("error_cl");
-      confirm = false;
-    }
-    
-    if (confirmPassword == '') {
-      alert("Enter your confirmPassword!")
-      jQuery(this).addClass("error_cl");
-      confirm = false;
-    }
     if (valid === true && confirm === true) {
       return true;
     }
